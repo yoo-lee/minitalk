@@ -1,0 +1,25 @@
+NAME = ft_display_file
+SRC = ft_display_file.c
+FLAGS = -Wall -Wextra -Werror -o
+
+all: $(NAME)
+
+$(NAME):
+	gcc $(FLAGS) $(NAME) $(SRC)
+
+clean:
+	/bin/rm -f *.o
+
+fclean: clean
+	/bin/rm -f $(NAME)
+
+re: fclean all
+
+#• Create a program called ft_display_file that displays, on the standard output,
+#only the content of the file given as argument.
+#• The submission directory should have a Makefile with the following rules : all,
+#clean, fclean. The binary will be called ft_display_file.
+#• The malloc function is forbidden. You can only do this exercise by declaring a
+#fixed-sized array.
+#• All files given as arguments will be valid.
+#• Error messages have to be displayed on their reserved output.

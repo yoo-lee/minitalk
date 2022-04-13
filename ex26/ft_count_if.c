@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_alphabet.c                               :+:      :+:    :+:   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoo-lee <yoo-lee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/06 22:18:43 by yoo-lee           #+#    #+#             */
-/*   Updated: 2022/04/13 15:31:26 by yoo-lee          ###   ########.fr       */
+/*   Created: 2022/04/12 19:24:37 by yoo-lee           #+#    #+#             */
+/*   Updated: 2022/04/12 19:30:22 by yoo-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_count_if(char **tab, int (*f)(char*))
 {
-	write(1, &c, 1);
-}
+	int	i;
+	int	j;
 
-void	ft_print_alphabet(void)
-{
-	char	str;
-
-	str = 'a';
-	while (str <= 'z')
+	i = 0;
+	j = 0;
+	while (tab[i])
 	{
-		ft_putchar(str);
-		str++;
+		if (f(tab[i]) == 1)
+			j++;
+		i++;
 	}
+	return (j);
 }
-/* 
-int		main(void)
-{
-	ft_print_alphabet();
-} */
+/* • Create a function ft_count_if 
+which will return the number of elements 
+of the array that return 1,
+ passed to the function f.
+• Here’s how the function 
+should be prototyped :
+int ft_count_if(char **tab, int(*f)(char*));
+• The array will be delimited by 0. */

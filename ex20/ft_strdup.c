@@ -1,36 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoo-lee <yoo-lee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/06 22:40:16 by yoo-lee           #+#    #+#             */
-/*   Updated: 2022/04/13 15:36:48 by yoo-lee          ###   ########.fr       */
+/*   Created: 2022/04/13 17:34:37 by yoo-lee           #+#    #+#             */
+/*   Updated: 2022/04/13 17:35:01 by yoo-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
-void	ft_putchar(char c)
+char	*ft_strdup(char *src)
 {
-	write(1, &c, 1);
-}
+	char			*newsrc;
+	unsigned int	i;
 
-void	ft_is_negative(int n)
-{
-	if (n < 0)
-		ft_putchar('N');
-	if (n > 0 || !n)
-		ft_putchar('P');
+	while (src[i])
+		i++;
+	newsrc = (void *)malloc(sizeof(*src) * (i + 1));
+	if (!newsrc)
+		return (NULL);
+	i = 0;
+	while (src[i])
+	{
+		newsrc[i] = src[i];
+		i++;
+	}
+	newsrc[i] = '\0';
+	return (newsrc);
 }
 /* 
 int main ()
 {
-	int n;
-	ft_is_negative(n);
-} */
-/* Create a function that displays ’N’ or ’P’ 
-depending on the integer’s sign entered
-as a parameter. If n is negative,
- display ’N’. If n is positive or null, display ’P */
+	char *str1 = "fdaoi";
+	char *str2 = NULL;
+	str2 = ft_strdup(str1);
+	printf("%s", str2);	
+}  */
