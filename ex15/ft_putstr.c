@@ -6,9 +6,11 @@
 /*   By: yoo-lee <yoo-lee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 16:31:32 by yoo-lee           #+#    #+#             */
-/*   Updated: 2022/04/13 17:35:09 by yoo-lee          ###   ########.fr       */
+/*   Updated: 2022/04/14 17:17:48 by yoo-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+void	ft_putchar(char c);
 
 void	ft_putstr(char *str)
 {

@@ -6,7 +6,7 @@
 /*   By: yoo-lee <yoo-lee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 18:07:22 by yoo-lee           #+#    #+#             */
-/*   Updated: 2022/04/12 18:09:37 by yoo-lee          ###   ########.fr       */
+/*   Updated: 2022/04/14 18:02:28 by yoo-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	ft_foreach(int *tab, int length, void(*f)(int))
 	i = 0;
 	while (i < length)
 		f(tab[i]);
+		i++;
 }
 /* Create the function ft_foreach which, 
 for a given ints array, applies a function on

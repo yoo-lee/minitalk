@@ -6,16 +6,13 @@
 /*   By: yoo-lee <yoo-lee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 15:35:11 by yoo-lee           #+#    #+#             */
-/*   Updated: 2022/04/13 15:35:50 by yoo-lee          ###   ########.fr       */
+/*   Updated: 2022/04/14 15:15:03 by yoo-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
 void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 void	ft_print_numbers(void)
 {
