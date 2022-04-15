@@ -1,8 +1,21 @@
-#ifndef	FT_POINT_H
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yoo-lee <yoo-lee@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/15 17:41:56 by yoo-lee           #+#    #+#             */
+/*   Updated: 2022/04/15 17:48:26 by yoo-lee          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#ifndef FT_POINT_H
+# define FT_POINT_H
 
-typedef struct s_point
-{
-int x;
-int y; 
-} t_point;
+typedef struct s_point {
+	int	x;
+	int	y;
+}				t_point;
+
+#endif
