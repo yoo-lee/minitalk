@@ -6,7 +6,7 @@
 /*   By: yoo-lee <yoo-lee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 11:50:01 by yoo-lee           #+#    #+#             */
-/*   Updated: 2022/04/15 11:50:03 by yoo-lee          ###   ########.fr       */
+/*   Updated: 2022/04/15 18:58:18 by yoo-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,3 @@ char	*ft_strdup(char *src)
 	newsrc[i] = '\0';
 	return (newsrc);
 }
-/* 
-int main ()
-{
-	char *str1 = "fdaoi";
-	char *str2 = NULL;
-	str2 = ft_strdup(str1);
-	printf("%s", str2);	
-}  */

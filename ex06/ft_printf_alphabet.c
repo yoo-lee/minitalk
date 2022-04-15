@@ -6,27 +6,20 @@
 /*   By: yoo-lee <yoo-lee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 22:18:43 by yoo-lee           #+#    #+#             */
-/*   Updated: 2022/04/15 11:59:32 by yoo-lee          ###   ########.fr       */
+/*   Updated: 2022/04/15 19:24:51 by yoo-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int		ft_putchar(char c);
+void	ft_putchar(char c);
 
 void	ft_print_alphabet(void)
 {
-	char	c;
+	char	x;
 
-	c = 'a';
-	while (c <= 'z')
+	x = 'a';
+	while (x >= 'a' && x <= 'z')
 	{
-		ft_putchar(c);
-		c++;
+		ft_putchar(x);
+		x++;
 	}
 }
-/* 
-int		main(void)
-{
-	ft_print_alphabet();
-} */

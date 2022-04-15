@@ -6,22 +6,19 @@
 /*   By: yoo-lee <yoo-lee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 22:40:16 by yoo-lee           #+#    #+#             */
-/*   Updated: 2022/04/13 15:36:48 by yoo-lee          ###   ########.fr       */
+/*   Updated: 2022/04/15 18:51:02 by yoo-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
 void	ft_is_negative(int n)
 {
 	if (n < 0)
 		ft_putchar('N');
-	if (n > 0 || !n)
+	else
 		ft_putchar('P');
 }
 /* 
