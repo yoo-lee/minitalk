@@ -6,30 +6,27 @@
 /*   By: yoo-lee <yoo-lee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 11:50:01 by yoo-lee           #+#    #+#             */
-/*   Updated: 2022/04/15 18:58:18 by yoo-lee          ###   ########.fr       */
+/*   Updated: 2022/04/16 15:28:23 by yoo-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 
 char	*ft_strdup(char *src)
 {
-	char			*newsrc;
-	unsigned int	i;
+	char			*res;
+	unsigned int	len;
 
-	while (src[i])
-		i++;
-	newsrc = (void *)malloc(sizeof(*src) * (i + 1));
-	if (!newsrc)
-		return (NULL);
-	i = 0;
-	while (src[i])
+	len = 0;
+	while (src[len] != '\0')
+		len++;
+	res = (char *)malloc(sizeof(*res) * (len + 1));
+	len = 0;
+	while (src[len] != '\0')
 	{
-		newsrc[i] = src[i];
-		i++;
+		res[len] = src[len];
+		len++;
 	}
-	newsrc[i] = '\0';
-	return (newsrc);
+	res[len] = '\0';
+	return (res);
 }

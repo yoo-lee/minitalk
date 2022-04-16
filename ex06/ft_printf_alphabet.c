@@ -6,11 +6,13 @@
 /*   By: yoo-lee <yoo-lee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 22:18:43 by yoo-lee           #+#    #+#             */
-/*   Updated: 2022/04/15 19:24:51 by yoo-lee          ###   ########.fr       */
+/*   Updated: 2022/04/16 15:18:56 by yoo-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <unistd.h>
+
+int		ft_putchar(char c);
 
 void	ft_print_alphabet(void)
 {

@@ -1,16 +1,29 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: yoo-lee <yoo-lee@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/04/16 15:33:08 by yoo-lee           #+#    #+#              #
+#    Updated: 2022/04/16 15:37:03 by yoo-lee          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = ft_display_file
-SRC = ft_display_file.c
-FLAGS = -Wall -Wextra -Werror -o
+FLAFS = -Wall -Werror -Wextra
+SRC =	ft_display_file.c
+HD = ./includes/
 
 all: $(NAME)
 
 $(NAME):
-	gcc $(FLAGS) $(NAME) $(SRC)
+	gcc $(FLAGS) $(SRC) -I $(HD) -o $(NAME)
 
 clean:
-	/bin/rm -f *.o
+	rm -f *.o
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all

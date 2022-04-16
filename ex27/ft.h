@@ -1,21 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_foreach.c                                       :+:      :+:    :+:   */
+/*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoo-lee <yoo-lee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/12 18:07:22 by yoo-lee           #+#    #+#             */
-/*   Updated: 2022/04/16 15:31:27 by yoo-lee          ###   ########.fr       */
+/*   Created: 2022/04/16 15:34:06 by yoo-lee           #+#    #+#             */
+/*   Updated: 2022/04/16 15:34:08 by yoo-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_foreach(int *tab, int length, void (*f)(int))
-{
-	int	i;
-
-	i = -1;
-	if (tab)
-		while (++i < length)
-			f(tab[i]);
-}
+#ifndef _FT_H
+# define _FT_H
+# include <fcntl.h>
+# include <unistd.h>
+#endif
