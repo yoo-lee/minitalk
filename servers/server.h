@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_point.h                                         :+:      :+:    :+:   */
+/*   server.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoo-lee <yoo-lee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/15 17:41:56 by yoo-lee           #+#    #+#             */
-/*   Updated: 2022/04/15 17:48:26 by yoo-lee          ###   ########.fr       */
+/*   Created: 2022/04/17 10:26:12 by yoo-lee           #+#    #+#             */
+/*   Updated: 2022/04/17 10:26:24 by yoo-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_POINT_H
-# define FT_POINT_H
+#ifndef SERVER_H
+# define SERVER_H
 
-typedef struct s_point {
-	int	x;
-	int	y;
-}				t_point;
+# include <unistd.h>
+# include <signal.h>
+# include <stdlib.h>
+
+void	ft_putstr(char *str);
+void	error(char *str);
+void	ft_putchar(char c);
+void	ft_putnbr(int n);
+void	sig_to_str(int bin);
+void	my_handler(int signum, siginfo_t *siginfo, void *unused);
 
 #endif

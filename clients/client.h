@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   client.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoo-lee <yoo-lee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/06 22:50:49 by yoo-lee           #+#    #+#             */
-/*   Updated: 2022/04/13 17:35:15 by yoo-lee          ###   ########.fr       */
+/*   Created: 2022/04/17 10:26:57 by yoo-lee           #+#    #+#             */
+/*   Updated: 2022/04/17 10:27:01 by yoo-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
-{
-	*div = a / b;
-	*mod = a % b;
-}
-/* 
-This function divides parameters a 
-by b and stores
-the result in the int pointed by
-div. It also stores the remainder 
-of the division of a by b 
-in the int pointed by mod. */
+#ifndef CLIENT_H
+# define CLIENT_H
+
+# include <unistd.h>
+# include <signal.h>
+# include <stdlib.h>
+
+void	ft_putstr(char *str);
+void	error(char *str);
+void	decimal_conversion(char ascii, int power, int pid);
+int		send_message(int server_pid, char *msg);
+void	my_handler(int signum, siginfo_t *siginfo, void *unused);
+
+#endif

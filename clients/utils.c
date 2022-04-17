@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_foreach.c                                       :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoo-lee <yoo-lee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/12 18:07:22 by yoo-lee           #+#    #+#             */
-/*   Updated: 2022/04/16 15:31:27 by yoo-lee          ###   ########.fr       */
+/*   Created: 2022/04/17 10:26:47 by yoo-lee           #+#    #+#             */
+/*   Updated: 2022/04/17 10:26:51 by yoo-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_foreach(int *tab, int length, void (*f)(int))
+#include "client.h"
+
+void	ft_putstr(char *str)
 {
 	int	i;
 
-	i = -1;
-	if (tab)
-		while (++i < length)
-			f(tab[i]);
+	i = 0;
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+}
+
+void	error(char *str)
+{
+	ft_putstr(str);
+	exit(0);
 }
